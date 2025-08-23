@@ -5,7 +5,7 @@ from pydantic import BaseModel
 import os, pathlib, io, base64
 import numpy as np
 import tensorflow as tf
-import tf_keras as keras            # TF 2.17.x compatible Keras
+from tensorflow import keras          # ✅ use bundled tf.keras with TF 2.20+
 from PIL import Image
 
 # ---------- Stable TF-Hub cache (prevents corrupt temp downloads on Windows) ----------
