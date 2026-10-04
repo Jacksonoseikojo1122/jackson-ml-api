@@ -181,7 +181,7 @@ See [`.env.example`](.env.example). The app reads the process environment; it do
 
 ## Quickstart
 
-The pinned runtime stack (TensorFlow 2.20) targets **Python 3.10 to 3.12**. There are no TensorFlow wheels for newer interpreters such as 3.14, and `tensorflow-cpu` has no macOS wheels (on macOS, install `tensorflow==2.20.0` instead).
+The pinned runtime stack (TensorFlow 2.20) targets **Python 3.10 to 3.12**; there are no TensorFlow wheels for newer interpreters such as 3.14. It uses the standard `tensorflow` package, which runs on CPU on Linux, macOS and Windows (the separate `tensorflow-cpu` 2.20 wheel fails to import on Linux, which the CI smoke test caught).
 
 ### Local virtual environment
 
