@@ -57,7 +57,8 @@ def main() -> None:
         print("vision-embed-search ok:", results)
 
         health = client.get("/health").json()
-        assert health["classifier_loaded"] and health["image_embedder_loaded"], health
+        models = health["models"]
+        assert models["classifier_loaded"] and models["image_embedder_loaded"], health
         print("health ok:", health)
 
     print("SMOKE TEST PASSED")
